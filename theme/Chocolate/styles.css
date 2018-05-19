@@ -1,0 +1,495 @@
+/*---------------------------------------------------------
+ * Theme    :  Chocolate 
+ * Par      : EDN | Swan
+ * Date     : 12/05/2018
+ * Site web :  http://easy-design.net/
+ * Commentaire ou autre de l'auteur 
+ # Merci de ne pas toucher au entête des fichiers CSS.
+ *----------------------------------------------------------*/
+
+/* -- Elements HTML generiques specifique au theme -- */
+/* -------------------------------------------------- */
+
+/* afficher le texte sélectionné en jaune sur fond rouge */
+::-moz-selection { color:#efefef;  background: #000000; }
+::selection     { color:#efefef;  background: #000000; }
+
+/* afficher le texte sélectionné dans un paragraphe en blanc sur fond noir */
+p::-moz-selection { color:#efefef;  background: #000000; }
+p::selection      { color:#efefef;  background: #000000; }
+
+html {
+	font-size: 100%;
+	font-size: 10px;
+}
+
+body {
+	background: url(images/bg.jpg) repeat scroll 0 0 #4b291d;
+	position: relative;
+	height: auto;
+	min-height: 100%;
+	color: #C29984;
+	font-size: 12px;
+	font-family: Georgia,"Times New Roman",Times,Serif;
+}
+
+
+@media (max-width: 768px) {
+	body {
+		font-size: 1.4em;
+	}
+}
+
+div#SuperGlobal {
+background-color: #3e291e;
+border-radius: 10px;
+margin: 50px auto auto auto;
+max-width: 1250px;
+}
+
+#siteName{
+    display: none;
+}
+
+/*#########################
+		Entete du site
+#########################*/
+
+/* -- En-tete de page - Header -- */
+/* ------------------------------ */
+header#header {
+	background: url(images/header.jpg) no-repeat scroll top center transparent;
+	height: 350px;
+	margin: auto;
+	max-width: 1250px;
+}
+
+/* --- Partie superieure du header --- */
+div#top-header {
+	background: url(images/logo.png) no-repeat scroll 200px 0 transparent;
+	border-top: 3px solid #000000;
+	border-bottom: 3px solid #000000;
+	display: flex;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	flex-direction: row;
+	-ms-flex-direction: row;
+	-webkit-flex-direction: row;
+	margin: auto;
+	min-height: 300px;
+	max-width: 1250px;
+}
+
+@media (max-width: 768px) {
+	div#top-header {
+		flex-direction: column;
+		-ms-flex-direction: column;
+		-webkit-flex-direction: column;
+	}
+}
+
+/* --- Partie inferieur du header --- */
+
+div#sub-header {
+	background-color: #100805;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	min-height: 35px;
+	max-width: 1250px;
+	margin: auto;
+}
+
+
+div#sub-header-content{
+	margin: auto;
+	max-width: 99%;
+}
+
+
+/* --  Menu Navigation  -- */
+/* ----------------------- */
+
+#navigation{
+    display: block;
+    list-style: none;
+    margin: 0;
+    font-size: 12px;
+    overflow: hidden;
+	margin: auto;
+	padding-top: 2px;
+	text-align: center; 
+	width: 70%;
+}
+
+ul#navigation { max-width: 1250px; }
+
+
+#navigation li{
+    /*float: left;*/
+display: inline-block; 
+margin-right: 10px;
+}
+
+#navigation a{
+    display: block;
+	font-size: 1em;
+	padding: 5px;
+	color: #BB9B8B;
+    transition: all 0.5s ease;
+}
+
+#navigation a:hover{
+    color: #8d8d8d;
+}
+
+#navigation li ul{
+    display: none;
+    position: absolute;	
+    list-style: none;
+	background: #573C2E;
+	border: 1px solid #000000;
+    box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.30);
+	border-radius: 5px;
+	padding-inline-start: 0px;
+}
+
+#navigation li:hover ul{
+    display: block;
+}
+
+#navigation li ul li{
+	text-align:left;
+	padding-left:5px;
+    clear: both;
+    width: 100%;
+}
+
+@media (max-width:768px) {
+	nav.small-screen {
+		margin-right: 0;
+		width: 100%;
+		height:auto;
+	}
+	ul#navigation { width: 100%; text-align:center; }
+	
+	ul.connect-content { 
+		margin-block-start:  0px;
+		margin-block-end:  0px;
+		padding-inline-start: 0px;
+		text-align: center;
+	}
+	ul.connect-content { margin: auto; padding-top: 3px;}
+	ul.connect-content li { 
+		display: block; 
+		margin:auto;
+		width: 100%;
+		border-top: 1px solid rgba(120, 120, 120, 0.2);
+		padding: 0.5em 0 0.5em 0;
+	}
+	ul.connect-content li , ul.connect-content ul li a {
+		padding:1.063em 0 1.063em 0;
+		width: 100%;
+		border-bottom: 0; 
+		color: #000000;
+	}
+}
+
+/*############################################
+	Menu droit du site - Menu gauche du site
+##############################################*/
+
+/* -- Flèche de masquage de la colonne droite & gauche-- */
+/* ----------------------------------------------------- */
+
+#hide-left { float:left; margin: 5px 0 0 5px; position: absolute;}
+#hide-right { float:right; margin: 5px 0 0 8px;position: relative;}
+
+.fa.fa-arrow-left { color: rgba(255,255,255, 0.6);}
+.fa.fa-arrow-right { color: rgba(255,255,255, 0.6);}
+
+@media (max-width:768px) {
+#hide-left, #hide-right { display:none; }
+}
+
+
+/* -- Conteneur global du site -- */
+/* ------------------------------ */
+
+
+div#global {
+	display: flex;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	flex-direction: column;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+	margin: 0 auto 0 auto;
+	padding: 0 2px;
+	max-width: 1250px;
+	border-radius: 10px;
+}
+
+div#main {
+	padding: 0 0 10px 0;
+	max-width: 100%;
+	order : 1;
+	-ms-flex-order: 1;
+	-webkit-flex-order: 1;
+}
+
+aside#menu-left,
+aside#menu-right {
+	width: 100%;
+}
+
+aside#menu-left  {
+	order : 2;
+	-ms-flex-order: 2;
+	-webkit-flex-order: 2;
+}
+aside#menu-right {
+	order : 3;
+	-ms-flex-order: 3;
+	-webkit-flex-order: 3;
+
+}
+
+@media (min-width: 769px) {
+	div#global {
+		min-height: 100vh;
+		flex-direction: row;
+		-ms-flex-direction: row;
+		-webkit-flex-direction: row;
+	}
+
+	div#main {
+		padding: 0 10px;
+		order : 2;
+		-ms-flex-order: 2;
+		-webkit-flex-order: 2;
+		flex: 1 0 auto;
+		-ms-flex: 1 0 100%;
+		margin-bottom: 30px;		
+	}
+	
+	aside#menu-left,
+	aside#menu-right {
+    	width: 250px;
+	}
+
+	aside#menu-left  { 
+		order : 1;
+		-ms-flex-order: 1;
+		-webkit-flex-order: 1;
+		margin-left: 10px;
+	}
+	aside#menu-right {
+		order : 3;
+		-ms-flex-order: 3;
+		-webkit-flex-order: 3;
+		margin-right: 10px;
+	}
+	
+	#main.main-with-left,
+	#main.main-with-right {
+		width: calc(100% - 250px);
+		-ms-flex: 1 0 auto; /*Tricks IE*/
+	}
+	
+	#main.main-with-left.main-with-right {
+		width: calc(100% - 500px);
+		-ms-flex: 1 0 auto; /*Tricks IE*/
+	}
+}
+
+
+/* -- Contenu de la page -- */
+/* ------------------------ */
+
+/* --- Contenu central --- */
+div#main-content {
+	padding: 1.5em 0em;
+
+}
+
+
+/*#############################################
+		Containers du site - Modules minis 
+#############################################*/
+/*-- mini-container des colonnes droite et gauche -- */
+/* ------------------------------------------------- */
+
+.module-mini-container {
+	background: #573C2E;
+	border: 1px solid #000000;
+	color: #A9A79E;
+	margin: 0 0 10px 0;
+	padding: 5px;
+	border-spacing: 1px;
+	clear: both;
+	border-radius: 12px;
+	
+}
+
+.module-mini-top {
+	background: linear-gradient(to bottom, #73574a 0%,#b09384 100%);
+	border: 1px solid #000000;
+	padding: 0.2em 0 0.2em 0;
+	min-height: 40px;
+	text-align: center;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.module-mini-container > h5,
+.module-mini-container> h3 {
+	color: #3f7d3b;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+	margin-top: 5px;	
+}
+
+.module-mini-contents {
+	padding: 0px 4px 0 4px;
+	border-top: none;
+	border-bottom: none;
+	text-align: left;
+}
+
+.module-mini-bottom {
+	height: 15px;
+}
+
+
+
+/* mini-container des colonnes droite et gauche */
+
+/* --- Contenu --- */
+#content {
+	padding: 0 1em;
+	text-align: justify;
+}
+
+@media (min-width: 769px) {
+	div#main.main-with-left.main-with-right section .content {
+		padding: 0 5px;
+	}
+}
+
+@media (max-width: 768px) {
+	.content {
+		padding: 1em 0;
+	}
+}
+
+.content + aside {
+	clear: both;
+}
+
+/* --- Grands Contenus --- */
+
+.container {
+    padding: 10px;
+}
+
+/* -- Pied de page - Footer -- */
+/* --------------------------- */
+footer#footer {
+	background: #100805;
+	min-height: 50px;
+	width: 100%;
+	clear: both;
+	margin-bottom: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+div#footer-bis {
+    height: 310px;
+    clear: both;
+    margin: 0 auto auto;
+    padding: 10px;
+    text-align: center;
+}
+div#footer_left {
+    height: 160px;
+	margin-left: 68px;
+	padding-top: 3px;
+	text-align: left;
+}
+
+footer#footer .footer-infos {
+    clear: both;
+	margin: 0 auto auto;
+	padding: 10px 0 0 0;
+	text-align: center;
+	min-height: 40px;
+}
+
+footer#footer .footer-infos span {
+	color: #ffffff;
+	font-size: 1.2em;
+}
+
+.footer-infos span a {
+    color: #aa0000;
+}
+
+#seo_social a{
+    display: none;
+	}
+	
+/*======================================
+		Alls Media Queries
+	CSS applique aux écrans PC & GSM 
+========================================*/
+
+
+@media (max-width:768px) {
+	header#header{
+		max-width: 100%;
+		height: auto;
+		margin:auto;
+	}
+
+
+div#top-header {
+    background: url(images/mn-logo.png) no-repeat scroll left 50px transparent;
+    margin: auto;
+    width: auto;
+}
+
+	footer#footer {
+		clear: both;
+		margin: auto;
+		height: auto;		
+	}
+	
+	div#footer-bis, div#footer_left {
+		display: none;
+	}
+		
+	footer#footer .footer-infos {
+		min-height: 40px;
+		text-align: center;
+		margin-bottom: 0px;
+		padding-top: 10px;
+	}
+	footer#footer {width:100%}
+
+	.footer-infos span {
+    display: block;
+    padding: 0 0 5px;
+	}
+
+	footer#footer .footer-infos span {
+	font-size: 0.8em;
+}
+	span.footer-infos-separator {
+		display: none;
+	}
+}
+
+@media (min-width:769px) {
+		img.entete{display: none;}
+}
