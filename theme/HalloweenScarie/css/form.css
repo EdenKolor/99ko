@@ -1,0 +1,258 @@
+/*---------------------------------------------------------
+ * Theme    : Thème MysticHalloween
+ * Par      : EDN-Swan
+ * Date     : 05/11/2017
+ * Site web :  http://easy-design.net/
+ * Commentaire ou autre de l'auteur 
+ # Merci de ne pas toucher au entête des fichiers CSS.
+ * Contient les conteneurs de mise en page.
+ * Le design.css permet de mettre en forme votre site web avec le design de votre choix
+*----------------------------------------------------------
+*		form.css
+* Contient les elements : 
+*  - button,
+*  - formulaire,
+-----------------------------------------*/
+
+
+/* -- Boutons et class boutons -- */
+/* ------------------------------ */
+
+button {cursor:pointer;}
+
+/* --- Normal --- */
+button,
+.button {
+	padding: 0.3em 1em;
+	height: auto;
+	background: linear-gradient(to bottom, #555555 0%,#444444 50%,#20232c 100%);
+	border: 1px solid #000000;
+	border-radius: 4px;
+	box-shadow: inset 0 0 0 rgba(255, 255, 255, 0.2), 0 0 2px rgba(0, 0, 0, 0.05);
+	color: #efefef;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
+	white-space: nowrap;
+	transition: all 0.2s linear;
+}
+
+button:hover,
+.button-hover {
+	color: #ff8c00;
+	transition: all 0.3s linear;
+}
+
+button:active,
+.button-active {
+	color: #ff0000;
+	border: 2px solid #000000;
+	box-shadow: inset 0 0 0 rgba(255, 255, 255, 0.2), 0 0 2px rgba(0, 0, 0, 0.05);
+	transition: all 0.2s linear;
+}
+
+/* --- Petit bouton --- */
+button.small,
+.button-small {
+	padding: 0.2em 0.5em;
+	font-size: 1.1rem;
+}
+
+/* --- Bouton de formulaire --- */
+button.submit {
+	border-color: #000000;
+	text-shadow: none;
+}
+
+button.submit:hover {
+	border-color: #000000;
+	color: #ff8c00;	
+}
+/* --- Bouton delete/reset/defaut --- */
+button.reset {
+	border-color: #000000;
+	color: #C40000;
+	text-shadow: none;
+}
+button.reset:hover {
+	border-color: #000000;
+	color: #ff8c00;	
+}
+/* --- Bouton basic --- */
+.basic-button {
+	display: inline-block;
+	margin: 1px;
+	padding: 1px 6px;
+	border: none;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.basic-button:hover {
+	color: #FAFAFA;
+	text-decoration: none;
+}
+
+/* --- Bouton basic avec couleur de base --- */
+.basic-button 		{ background: #621502 !important; text-shadow: 1px 1px 2px #000000; border-radius:3px;}
+.basic-button:hover 	{ background: #ff670f !important; border-radius:3px;}
+
+/* --- Bouton basic avec couleur alternative --- */
+.basic-button.alt 		{ background-color: #ff670f; }
+.basic-button.alt:hover { background-color: #621502; }
+
+/* -- Formulaires -- */
+/* ----------------- */
+
+fieldset {
+	margin: 1.5em 0;
+	background: none;
+	border: none;	
+}
+
+fieldset img {
+	max-width: 250px;
+}
+
+@media (min-width: 769px) {
+	fieldset img {
+		max-width: 450px;
+	}
+}
+
+fieldset.fieldset-submit {
+	width: 100%;
+	background: none;
+	border: none;
+	text-align: center;
+}
+
+fieldset.fieldset-submit legend {
+	display: none;
+}
+
+optgroup {
+	border: none;
+	border-bottom: 1px solid #5B5A5A;
+	font-weight: bold;
+}
+
+option {
+	padding: 0 3px;
+}
+
+legend {
+    border-bottom: 1px solid #78e4ff;
+    color: #ffffff;
+    display: block;
+    font-size: 1.2em;
+    margin: 0 0 0.6em;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+/* --- Elements de saisie --- */
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=number],
+input[type=color],
+input[type=tel],
+input[type=search],
+input[type=password],
+input[type=file],
+textarea,
+select {
+	padding: 4px 18px 4px 6px;
+	background-color: #444444;
+	color: #ffffff;
+	border: 1px solid #000000;
+	border-radius: 4px;
+	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.8);
+}
+
+input[type=text]:hover,
+input[type=email]:hover,
+input[type=url]:hover,
+input[type=number]:hover,
+input[type=color]:hover,
+input[type=tel]:hover,
+input[type=search]:hover,
+input[type=password]:hover,
+input[type=file]:hover,
+textarea:hover,
+select:hover {
+	background-color: #333333;
+	color: #efefef;
+	border: 1px solid #000000;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.01);
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=number]:focus,
+input[type=color]:focus,
+input[type=tel]:focus,
+input[type=search]:focus,
+input[type=password]:focus,
+input[type=file]:focus,
+textarea:focus,
+select:focus {
+	background-color: #444444;
+	color: #ffffff;
+	border: 1px solid #000000;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.01);
+}
+
+input[type=color] {
+	padding: 0 2px 0 2px;
+	width: 25px;
+}
+
+/* --- Textarea --- */
+
+textarea {
+	width: 100%;
+	min-height: 40px;
+	padding: 5px;
+	overflow: auto;
+	resize: vertical;
+}
+
+/* --- Pagination --- */
+
+.news ul.pagination {
+	margin-top: 5px;
+	text-align: center;
+}
+
+.news .pagination ,.pagination{
+	background: #efefef;
+	border: 1px solid #dddddd;
+	font-size: 1em;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
+	transition: all 0.2s linear;
+	border-radius: 4px;
+	padding-left: 0;
+    list-style: none inside;
+    float: right;
+}
+
+.news .pagination li, .pagination li {
+    float: left;
+    margin: auto;
+}
+
+.news .pagination  a, .pagination a {
+	display: inline-block !important;
+	background: none;
+	padding: 2px 6px;
+	outline: none;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	color:#222222;
+}
+.news .pagination  a:hover, .pagination a:hover {
+	color:#3f7d3b;
+}
