@@ -1,0 +1,506 @@
+/*---------------------------------------------------------
+ * Theme    : Thème MyLove
+ * Par      : EDN | Swan
+ * Date     : 17/04/2017
+ * Site web :  http://easy-design.net/
+ * Commentaire ou autre de l'auteur 
+ # Merci de ne pas toucher au entête des fichiers CSS.
+ *----------------------------------------------------------*/
+
+/* -- Elements HTML generiques specifique au theme -- */
+/* -------------------------------------------------- */
+
+/* afficher le texte sélectionné | Exemple texte blanc sur fond noir */
+::-moz-selection { color:#403A3E;  background: #FFE4E4; }
+::selection     { color:#403A3E;  background: #FFE4E4; }
+
+/* afficher le texte sélectionné dans un paragraphe | Exemple texte blanc sur fond noir */
+p::-moz-selection { color:#403A3E;  background: #FFE4E4; }
+p::selection      { color:#403A3E;  background: #FFE4E4; }
+
+html {
+	font-size: 100%;
+	font-size: 10px;
+}
+
+body {
+	background: transparent url('images/bg.jpg')no-repeat fixed top center;
+	height: auto;
+	min-height: 100%;
+	font-family: Verdana, 'Bitstream Vera Sans', Times, serif;
+	color:#403A3E;
+	font-size: 1.2em;
+	position: relative;
+	margin: auto;
+}
+
+
+@media (max-width: 768px) {
+	body {
+		font-size: 1.4em;
+	}
+}
+
+div#SuperGlobal {
+    max-width: 1024px;
+    margin: auto;
+}
+
+#siteName{
+    display: none;
+}
+
+/*#########################
+		Entete du site
+#########################*/
+
+/* -- En-tete de page - Header -- */
+/* ------------------------------ */
+header#header {
+	background: url('images/header.png') no-repeat scroll -11px center transparent;
+	height: 429px;
+	margin: 30px auto auto;
+	max-width: 1030px;
+}
+
+/* --- Partie superieure du header --- */
+div#top-header {
+	display: flex;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	flex-direction: row;
+	-ms-flex-direction: row;
+	-webkit-flex-direction: row;
+	margin: auto;
+	min-height: 374px;
+	max-width: 1024px;
+}
+
+@media (max-width: 768px) {
+	div#top-header {
+		flex-direction: column;
+		-ms-flex-direction: column;
+		-webkit-flex-direction: column;
+	}
+}
+
+/* --- Partie inferieur du header --- */
+
+div#sub-header {
+	min-height: 40px;
+	padding: 2px 5px;
+	margin:auto;
+}
+
+
+div#sub-header-content{
+	margin: auto;
+	max-width: 925px;
+}
+
+
+/* --  Menu Navigation  -- */
+/* ----------------------- */
+
+#navigation{
+    display: block;
+    list-style: none;
+    margin: 0;
+    font-size: 12px;
+    overflow: hidden;
+	margin: auto;
+	padding-top: 5px;
+	text-align: center; 
+	width: 70%;
+}
+
+ul#navigation { max-width: 1024px; }
+
+
+#navigation li{
+    /*float: left;*/
+display: inline-block; 
+margin-right: 10px;
+}
+
+#navigation a{
+    display: block;
+	font-size: 1em;
+	padding-right: 5px;
+	color: #8b191b;
+    transition: all 0.5s ease;
+}
+
+#navigation a:hover{
+    color: #8b191b;
+	text-decoration:underline;
+}
+
+#navigation li ul{
+    display: none;
+    position: absolute;	
+    list-style: none;
+    background: #fff;
+    box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.30);
+}
+
+#navigation li:hover ul{
+    display: block;
+}
+
+#navigation li ul li{
+    clear: both;
+    width: 100%;
+}
+
+@media (max-width:768px) {
+	nav.small-screen {
+		margin-right: 0;
+		width: 100%;
+		height:auto;
+	}
+	ul#navigation { width: 100%; text-align:center; }
+	
+	ul.connect-content { 
+		margin-block-start:  0px;
+		margin-block-end:  0px;
+		padding-inline-start: 0px;
+		text-align: center;
+	}
+	ul.connect-content { margin: auto; padding-top: 3px;}
+	ul.connect-content li { 
+		display: block; 
+		margin:auto;
+		width: 100%;
+		border-top: 1px solid rgba(120, 120, 120, 0.2);
+		padding: 0.5em 0 0.5em 0;
+	}
+	ul.connect-content li , ul.connect-content ul li a {
+		padding:1.063em 0 1.063em 0;
+		width: 100%;
+		border-bottom: 0; 
+		color: #000000;
+	}
+}
+
+/*############################################
+	Menu droit du site - Menu gauche du site
+##############################################*/
+
+/* -- Flèche de masquage de la colonne droite & gauche-- */
+/* ----------------------------------------------------- */
+
+#hide-left { float:left; margin: 5px 0 0 5px; position: absolute;}
+#hide-right { float:right; margin: 4px 0 0 8px;position: relative;}
+
+.fa.fa-arrow-left { color: rgba(139,25,27, 0.6);}
+.fa.fa-arrow-right { color: rgba(139,25,27, 0.6);}
+
+@media (max-width:768px) {
+#hide-left, #hide-right { display:none; }
+}
+
+
+/* -- Conteneur global du site -- */
+/* ------------------------------ */
+
+div#G-top {
+    background: transparent url('images/global.png') repeat-y scroll center 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+div#global {
+	/*background: transparent url('images/main-top.png') no-repeat scroll 0 0;*/
+	display: flex;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	flex-direction: column;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+	margin: 0 auto 0 auto;
+	padding: 0 20px;
+	max-width: 1250px;
+}
+
+div#main {
+	padding: 0 0 10px 0;
+	max-width: 100%;
+	order : 1;
+	-ms-flex-order: 1;
+	-webkit-flex-order: 1;
+}
+
+aside#menu-left,
+aside#menu-right {
+	width: 100%;
+}
+
+aside#menu-left  {
+	border-right: 1px solid #8b191b;
+	order : 2;
+	-ms-flex-order: 2;
+	-webkit-flex-order: 2;
+}
+aside#menu-right {
+	border-left: 1px solid #8b191b;
+	order : 3;
+	-ms-flex-order: 3;
+	-webkit-flex-order: 3;
+
+}
+
+@media (min-width: 769px) {
+	div#global {
+		min-height: 100vh;
+		flex-direction: row;
+		-ms-flex-direction: row;
+		-webkit-flex-direction: row;
+	}
+
+	div#main {
+		padding: 0 10px;
+		order : 2;
+		-ms-flex-order: 2;
+		-webkit-flex-order: 2;
+		flex: 1 0 auto;
+		-ms-flex: 1 0 100%;
+		margin-bottom: 30px;		
+	}
+	
+	aside#menu-left,
+	aside#menu-right {
+    	width: 200px;
+	}
+
+	aside#menu-left  { 
+		order : 1;
+		-ms-flex-order: 1;
+		-webkit-flex-order: 1;
+		margin-left: 10px;
+	}
+	aside#menu-right {
+		order : 3;
+		-ms-flex-order: 3;
+		-webkit-flex-order: 3;
+		margin-right: 10px;
+	}
+	
+	#main.main-with-left,
+	#main.main-with-right {
+		width: calc(100% - 200px);
+		-ms-flex: 1 0 auto; /*Tricks IE*/
+	}
+	
+	#main.main-with-left.main-with-right {
+		width: calc(100% - 400px);
+		-ms-flex: 1 0 auto; /*Tricks IE*/
+	}
+}
+
+
+/* -- Contenu de la page -- */
+/* ------------------------ */
+
+/* --- Contenu central --- */
+div#main-content {
+	padding: 1.5em 0em;
+
+}
+
+
+/*#############################################
+		Containers du site - Modules minis 
+#############################################*/
+/*-- mini-container des colonnes droite et gauche -- */
+/* ------------------------------------------------- */
+
+.module-mini-container {
+	background: url('images/top.png') no-repeat scroll center top transparent;
+	border-spacing: 1px;
+	margin: 0 0 10px 0;
+	padding: 5px;
+    border-radius:12px;	
+	clear: both;
+}
+
+.module-mini-top {
+	padding: 0.2em 0 0.2em 0;
+	height: 36px;
+	text-align: center;
+}
+
+.module-mini-container > h5,
+.module-mini-container> h3 {
+	color: #3f7d3b;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+	margin-top: 5px;	
+}
+
+.module-mini-contents {
+	padding: 0px 4px 0 4px;
+	border-top: none;
+	border-bottom: none;
+	text-align: left;
+}
+
+.module-mini-bottom {
+	height: 15px;
+}
+
+
+
+/* mini-container des colonnes droite et gauche */
+
+/* --- Contenu --- */
+#content {
+	padding: 0 1em;
+	text-align: justify;
+}
+
+@media (min-width: 769px) {
+	div#main.main-with-left.main-with-right section .content {
+		padding: 0 5px;
+	}
+}
+
+@media (max-width: 768px) {
+	.content {
+		padding: 1em 0;
+	}
+}
+
+.content + aside {
+	clear: both;
+}
+
+/* --- Grands Contenus --- */
+
+.container {
+    padding: 10px;
+}
+
+/* -- Pied de page - Footer -- */
+/* --------------------------- */
+footer#footer {
+
+background: transparent url('images/footer.png') no-repeat scroll center 0;
+clear: both;
+height: 340px;
+margin: 0 auto auto;
+width: 100%;
+padding: 12px;
+text-align: center;
+}
+
+div#footer-bis {
+    height: 227px;
+    clear: both;
+    margin: 0px auto auto 12px;
+    padding: 0px;
+    text-align: center;
+}
+div#footer_left {
+	height: 250px;
+	margin-left: 70px;
+	text-align: left;
+}
+
+footer#footer .footer-infos {
+    clear: both;
+	margin: 0 auto auto;
+	padding: 5px 0 0 0;
+	text-align: center;
+	min-height: 40px;
+}
+
+footer#footer .footer-infos span {
+	color: #000000;
+	font-size: 0.8em;
+}
+
+#seo_social a{
+    display: none;
+	}
+	
+/*======================================
+		Alls Media Queries
+	CSS applique aux écrans PC & GSM 
+========================================*/
+
+
+@media (max-width:768px) {
+	header#header{
+		background: none;
+		max-width: 100%;
+		height: auto;
+		margin:auto;
+	}
+
+	img.entete{
+		max-width: 100%;
+		height: auto;
+	}
+	div#top-header {
+
+		max-width: 100%;
+		min-height: auto;
+	}	
+	
+	div#sub-header{
+		background: #E85757;
+		border-top: 1px solid #B84A4A;
+		margin-top:5px;
+	}
+	
+	aside#menu-left  {
+		border:none;
+	}
+	aside#menu-right {
+		border: none;
+	}
+	
+	div#G-top, div#global {
+		background: #FFFFFF;
+	}	
+	
+	footer#footer {
+	background: #FFE4E4;
+	border-top: 1px solid #D99B9B;
+	clear: both;
+	margin: auto;
+	width: 1250px;
+    height: auto;		
+	}
+	
+	div#footer-bis, div#footer_left {
+		display: none;
+	}
+	
+	footer#footer .footer-infos {
+		min-height: 40px;
+		text-align: center;
+		margin-bottom: 0px;
+		padding-top: 10px;
+	}
+	footer#footer {width:100%}
+
+	.footer-infos span {
+    display: block;
+    padding: 0 0 5px;
+	}
+
+	footer#footer .footer-infos span {
+	font-size: 0.8em;
+	}
+	
+	span.footer-infos-separator {
+		display: none;
+	}
+}
+
+@media (min-width:769px) {
+		img.entete{display: none;}
+}
