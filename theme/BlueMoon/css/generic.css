@@ -1,0 +1,318 @@
+/*---------------------------------------------------------
+ * Theme    : Thème BlueMoon
+ * Par      : EDN | Swan
+ * Date     : 01/04/2017
+ * Site web :  http://easy-design.net/
+ * Commentaire ou autre de l'auteur 
+ # Merci de ne pas toucher au entête des fichiers CSS.
+ * Contient les conteneurs de mise en page.
+ * Le design.css permet de mettre en forme votre site web avec le design de votre choix
+ *---------------------------------------------------------
+		generic.css
+ Contient les classes génériques, ne devant pas être modifiée pour chaque thème.
+--------------------------------------*/ 
+
+/* Reset */
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border: none;
+	overflow: auto;
+	vertical-align: middle;
+}
+
+
+/* Balises */
+
+.indent {
+	margin-left: 30px;
+}
+/* --- Les liens du site --- */
+a {
+	color: #00e5ff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #85b9bf;
+	text-decoration: none;
+}
+
+a.small_link { font-size: 10px;}
+a.info { color:#464646;}
+
+div#footer a, div#footer span a{
+	color:#D856D8;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div#footer span {
+    color: #000000;
+    font-size: 10px;
+}
+img {
+    border:none;
+}
+
+hr {
+    color:#061729;
+    height:1px;
+}
+
+p {
+    margin-bottom:0.7em;
+    line-height:1.40em;
+    font-size:1em;
+}
+
+/* --- LISTES --- */
+/*----------------*/
+
+ul, ol {
+	line-height: normal;
+	margin-bottom: 10px;
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+   padding-inline-start: 40px;
+}
+ul {
+	list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    margin:0;
+    line-height:normal;
+
+}
+
+ul.no-list {
+	list-style: none;
+}
+
+/* Classes textes */
+.text_center {
+    text-align:center;
+}
+
+.text_small {
+    font-size:10px;
+    font-weight:normal;
+}
+
+.text_strong {
+    font-weight:bold;
+}
+
+.text_justify {
+    text-align:justify;
+}
+
+.img_right {
+    float:right;
+    margin:6px;
+}
+
+.img_left {
+    float:left;
+    margin:6px;
+}
+
+.valign_top {
+    vertical-align:top;
+}
+
+.valign_middle {
+    vertical-align:middle;
+}
+
+.valign_bottom {
+    vertical-align:bottom;
+}
+
+.spacer {
+    clear:both;
+}
+
+/* Stylisations de code
+--------------------------------------*/
+/* ligne horzontale */
+hr {
+    background: none repeat scroll 0 0 #444444;
+    border: medium none;
+    height: 1px;
+    margin: 1px auto;
+    width: 99%;
+}
+
+/* Centrer son texte */
+.center, span.center, p.center {text-align:center;}
+
+/* Texte à gauche */
+.left {text-align:left;}
+
+/* Texte à droite */
+.right{text-align:right;}
+
+/* Texte flottant à droite */
+.float_right {
+    float: right;
+    margin: 5px;
+}
+/* Texte flottant à gauche */
+.float_left {
+    float: left;
+    margin: 5px;
+}
+ /* Gère l'alignement vertical d'un texte ou d'une image */
+.valign_middle {
+    vertical-align: middle;
+}
+/* Déplacer le texte hors du Viewport avec text-indent ou position*/
+.display {
+    position: absolute;
+    left: -9999em;
+}
+.indent {
+    margin-left: 30px;
+}
+.quote {
+    border: 1px dashed #AAAAAA;
+    color: #444444;
+    margin: 0 11px;
+    padding: 24px 8px 8px;
+}
+
+.bb_block {
+    border: 1px solid #777777;
+    margin: 5px 20px;
+    padding: 5px;
+}
+
+fieldset {
+    background: none repeat scroll 0 0 #E8F8E7;
+    border: 1px solid #CCCCCC;
+    color: #333333;
+    font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,'Bitstream Vera Sans',Times,serif;
+    margin: 20px 0;
+    padding: 6px;
+    position: relative;
+}
+
+legend {
+    background: none repeat scroll 0 0 #E8F8E7;
+    border: 1px solid #CCCCCC;
+    color: #333333;
+    font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,'Bitstream Vera Sans',Times,serif;
+    font-size: 0.85em;
+    font-weight: bold;
+    line-height: 1.5em;
+    margin-left: 0.5em;
+    margin-top: -0.4em;
+    padding: 2px 10px;
+    position: relative;
+    text-transform: uppercase;
+    top: 0;
+    vertical-align: middle;
+}
+
+html > body .question, html > body .notice, html > body .warning, html > body .error, html > body .success, html > body .note, html > body .astuce{
+    height: auto;
+    min-height: 55px;
+}
+.question, .notice, .warning, .error, .success, .note, .astuce {
+    background-position: 4px 4px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    display: block;
+    height: auto;
+    margin: 4px 25px;
+    padding: 4px 5px 10px 40px;
+	color: #555;	
+}
+
+.error:before    { color:#88181A;}
+.notice:before   { color: #777777}
+.warning:before	 { color: #5E3D0F;}
+.success:before	 { color: #09460E;}
+.question:before { color:#0000FF;}
+.note:before {color: #335522;}
+.astuce:before {color: #232255;}
+
+.success { background: url('../images/success.png') no-repeat scroll 3px 3px #B1E2AD;}
+.question { background: url('../images/question.png') no-repeat scroll 3px 3px #ADCEE2;}
+.notice { background: url('../images/notice.png') no-repeat scroll 3px 3px #CCCCCC;}
+.warning { background: url('../images/important.png') no-repeat scroll 3px 3px #F3BC70;}
+.error { background: url('../images/stop.png') no-repeat scroll 3px 3px #FF9193;}
+.note { background: url('../images/note.png') no-repeat scroll 3px 3px #DDFFCC;}
+.astuce { background: url('../images/astuce.png') no-repeat scroll 3px 3px #D4CDFF;}
+
+/** Titres **/
+h3.title1, h3.title2{
+    border-bottom: 2px solid #A981B4;
+    font-size: 12px;
+    margin: auto auto -5px;
+    padding: 0 5px;
+
+}
+/* Titre 1 */
+h3.title1 {
+	border-bottom: 2px solid #000000;
+	font-size: 2.0rem;
+    width: 98%;
+	}
+/* Titre 2 */
+h3.title2{
+	background-color: rgba(255,255,255, 0.5);
+	border-color: #000000;
+	border-style: solid;
+	border-width: 1px 3px;
+	border-radius: 5px;
+	margin-left: 1.5rem;
+	padding: 0 7px 0 7px;
+	display: inline-block;
+}
+h4.stitle1, h4.stitle2{
+	background-color: rgba(255,255,255, 0.5);
+	border-color: #000000;
+	border-style: solid;
+	border-width: 1px 3px;
+	border-radius: 5px;
+    color: #404040;
+    display: inline;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 35px;
+    padding: 2px 5px;
+}
+/* Sous titre 1 */
+h4.stitle1{
+	border-style:solid;
+	border-width:1px 3px;
+
+}
+/* Sous titre 2 */
+h4.stitle2{
+	border-style:solid;
+	border-width:3px 1px 1px;
+	margin-left:50px;
+}
+h5.sub_title {
+	color:#FFFFFF;
+	font-size: 1.6rem;
+	text-decoration: none;
+	font-weight: bold;
+}
