@@ -1,0 +1,437 @@
+/*---------------------------------------------------------
+ * Theme    : Thème L2ForOne
+ * Par      : EDN | Swan
+ * Date     : 18/05/2017
+ * Site web :  http://easy-design.net/
+ * Commentaire ou autre de l'auteur 
+ # Merci de ne pas toucher au entête des fichiers CSS.
+ * Contient les conteneurs de mise en page.
+ * Le design.css permet de mettre en forme votre site web avec le design de votre choix
+ *----------------------------------------------------------*
+ *
+/* -- Elements HTML generiques specifique au theme -- */
+/* -------------------------------------------------- */
+
+/* afficher le texte sélectionné en jaune sur fond rouge */
+::-moz-selection { color:#efefef;  background: #000000; text-shadow: none;}
+::selection     { color:#efefef;  background: #000000; text-shadow: none;}
+
+/* afficher le texte sélectionné dans un paragraphe en blanc sur fond noir */
+p::-moz-selection { color:#efefef;  background: #000000; text-shadow: none;}
+p::selection      { color:#efefef;  background: #000000; text-shadow: none;}
+
+
+body {
+	background: none repeat scroll 0 0 #49260a;
+	color: #ffffff;
+	font-family: "Segoe UI","Trebuchet MS",Arial,sans-serif;
+	font-size: 13px;
+	margin: 0;
+	padding: 0;
+}
+
+div#SuperGlobal {
+	margin: auto;
+	width: auto;
+}
+
+#siteName{}
+
+/*#########################
+		Entête du site
+#########################*/
+#h-top {
+
+    height: 50px;
+    margin: auto;
+    overflow: visible;
+    position: relative;
+    width: 1205px;
+    z-index: 2;
+}
+#logo{
+    background: url('images/logo.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 250px;
+	margin: 10px auto;
+    width: 250px;
+}
+#header_container {}
+#header {
+    text-align: center;
+}
+.sub_header {}
+
+
+/* -- En-tete de page - Header -- */
+/* ------------------------------ */
+header#header {}
+
+/* --- Partie superieure du header --- */
+div#top-header {}
+
+/* --- Partie inferieur du header --- */
+
+div#sub-header {}
+
+
+div#sub-header-content{}
+
+
+/* --  Menu Navigation  -- */
+/* ----------------------- */
+
+#navigation{
+    display: block;
+    list-style: none;
+    margin: 0;
+    font-size: 12px;
+    overflow: hidden;
+	margin: auto;
+	padding-top: 25px;
+	text-align: center; 
+	width: 98%;
+}
+
+ul#navigation { max-width: 1024px; }
+
+
+#navigation li{
+    /*float: left;*/
+display: inline-block; 
+margin-right: 10px;
+}
+
+#navigation a{
+	color: #eeeeee;
+	transition: all 0.3s ease-in-out 0s;
+	display: block;
+	float: left;
+	font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+	font-size: 23px !important;
+	font-weight: bold;
+	padding: 7px 32px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 1px 0 black;
+	transition-delay: 0.1s;
+	transition-duration: 0.4s;
+	transition-property: color;
+	white-space: nowrap;
+}
+
+#navigation a:hover{
+    color: #ffe100;
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 23px !important;
+    font-weight: bold;
+    transition: all 0.8s ease-out 0s;
+	text-decoration:underline;
+    padding: 5px 20px;
+}
+
+#navigation li ul{
+    display: none;
+    position: absolute;	
+    list-style: none;
+    background: #fff;
+    box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.30);
+}
+
+#navigation li:hover ul{
+    display: block;
+}
+
+#navigation li ul li{
+    clear: both;
+    width: 100%;
+}
+
+@media (max-width:768px) {
+	nav.small-screen {
+		margin-right: 0;
+		width: 100%;
+		height:auto;
+	}
+	ul#navigation { width: 100%; text-align:center; }
+	
+	ul.connect-content { 
+		margin-block-start:  0px;
+		margin-block-end:  0px;
+		padding-inline-start: 0px;
+		text-align: center;
+	}
+	ul.connect-content { margin: auto; padding-top: 3px;}
+	ul.connect-content li { 
+		display: block; 
+		margin:auto;
+		width: 100%;
+		border-top: 1px solid rgba(120, 120, 120, 0.2);
+		padding: 0.5em 0 0.5em 0;
+	}
+	ul.connect-content li , ul.connect-content ul li a {
+		padding:1.063em 0 1.063em 0;
+		width: 100%;
+		border-bottom: 0; 
+		color: #000000;
+	}
+}
+
+
+/* -- Conteneur global du site -- */
+/* ------------------------------ */
+div#global {
+	display: flex;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	flex-direction: column;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+	margin: auto;
+	width: auto;
+}
+
+div#main {
+	padding: 0 0 10px 0;
+	max-width: 100%;
+	order : 1;
+	-ms-flex-order: 1;
+	-webkit-flex-order: 1;
+}
+
+aside#menu-left {
+	width: 100%;
+}
+
+aside#menu-left  {
+    background: none repeat scroll 0 0 #d1c4b3;
+	border-bottom: 6px solid #423C3A;
+    color: #412600;
+	order : 2;
+	-ms-flex-order: 2;
+	-webkit-flex-order: 2;
+}
+
+
+
+@media (min-width: 769px) {
+	div#global {
+		min-height: 100vh;
+		flex-direction: row;
+		-ms-flex-direction: row;
+		-webkit-flex-direction: row;
+	}
+
+	div#main {
+		padding: 0 10px;
+		order : 2;
+		-ms-flex-order: 2;
+		-webkit-flex-order: 2;
+		flex: 1 0 auto;
+		-ms-flex: 1 0 100%;
+		margin-bottom: 30px;		
+	}
+
+	aside#menu-left{
+    	width: 250px;
+	}
+
+	aside#menu-left  { 
+		order : 1;
+		-ms-flex-order: 1;
+		-webkit-flex-order: 1;
+
+	}
+
+	#main.main-with-left {
+		width: calc(100% - 250px);
+		-ms-flex: 1 0 auto; /*Tricks IE*/
+	}
+	
+	#main.main-with-left {
+		width: calc(100% - 600px);
+		-ms-flex: 1 0 auto; /*Tricks IE*/
+	}
+}
+
+
+/* -- Contenu de la page -- */
+/* ------------------------ */
+
+/* --- Contenu central --- */
+div#main-content {
+width: auto;
+}
+
+
+/*#############################################
+		Containers du site - Modules minis 
+#############################################*/
+/*-- mini-container des colonnes droite et gauche -- */
+/* ------------------------------------------------- */
+
+.module-mini-container {
+	border-spacing: 1px;
+	margin: 0 0 35px;
+}
+
+.module-mini-top {
+font-weight: bold;
+height: 37px;
+margin-left: -5px;
+text-align: center;
+}
+
+.module-mini-container h5.sub_title,
+.module-mini-container h3.sub_title{
+	color: #352726;
+	font-size: 28px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.module-mini-contents {
+    border-bottom: medium none;
+    border-top: medium none;
+    padding: 5px 20px 0;
+	margin:auto;
+    text-align: left;
+}
+
+.logo {
+
+    padding: 5px 0 0;
+    text-align: left;
+}
+  
+.module-mini-bottom {
+	height: 15px;
+}
+
+
+
+/* mini-container des colonnes droite et gauche */
+
+/* --- Contenu --- */
+#content {
+	padding: 0 1em;
+	text-align: justify;
+}
+
+@media (min-width: 769px) {
+	div#main.main-with-left.main-with-right section .content {
+		padding: 0 5px;
+	}
+}
+
+@media (max-width: 768px) {
+	.content {
+		padding: 1em 0;
+	}
+}
+
+.content + aside {
+	clear: both;
+}
+
+/* --- Grands Contenus --- */
+
+.container {
+    padding: 10px;
+}
+
+/* -- Pied de page - Footer -- */
+/* --------------------------- */
+footer#footer {
+	clear: both;
+	height: 50px;
+	padding: 25px;
+	text-align: center;
+}
+
+footer#footer .footer-content {
+	margin: 0 auto 0 auto;
+	padding: 1.5em 0;
+	max-width: 1024px;
+}
+
+footer#footer .footer-infos {
+    clear: both;
+	margin: 0 auto auto;
+	padding: 10px 0 0 0;
+	text-align: center;
+	min-height: 40px;
+}
+
+footer#footer .footer-infos span {
+	color: #ffffff;
+	font-size: 12px;
+}
+
+#seo_social a{
+    display: none;
+	}
+
+/*======================================
+		Alls Media Queries
+	CSS applique aux écrans PC & GSM 
+========================================*/
+
+
+@media (max-width:768px) {
+	header#header{
+		background: none;
+		max-width: 100%;
+		height: auto;
+		margin:auto;
+	}
+
+	img.entete{
+		max-width: 100%;
+		height: auto;
+		margin:auto;
+	}
+	div#top-header {
+
+		max-width: 100%;
+		min-height: auto;
+	}	
+	
+	footer#footer {
+	clear: both;
+	margin: auto;
+	width: 1250px;
+    height: auto;		
+	}
+	
+	div#footer-bis {  height: 1px;}	
+	
+	footer#footer .footer-infos {
+		min-height: 40px;
+		text-align: center;
+		margin-bottom: 0px;
+		padding-top: 10px;
+	}
+	footer#footer {width:100%}
+
+	.footer-infos span {
+    display: block;
+    padding: 0 0 5px;
+	}
+	footer#footer .footer-infos {
+    min-height: 40px;
+    padding-top: 5px;
+    text-align: center;
+}
+	footer#footer .footer-infos span {
+	font-size: 0.8em;
+}
+	span.footer-infos-separator {
+		display: none;
+	}
+}
+
+@media (min-width:769px) {
+		img.entete{display: none;}
+}
+

@@ -1,0 +1,321 @@
+/*---------------------------------------------------------
+ * Theme    : Thème L2ForOne
+ * Par      : EDN | Swan
+ * Date     : 18/05/2017
+ * Site web :  http://easy-design.net/
+ * Commentaire ou autre de l'auteur 
+ # Merci de ne pas toucher au entête des fichiers CSS.
+ * Contient les conteneurs de mise en page.
+ * Le design.css permet de mettre en forme votre site web avec le design de votre choix
+ *----------------------------------------------------------
+ *		generic.css
+ * Contient les classes génériques, ne devant pas être modifiée pour chaque thème.
+--------------------------------------*/ 
+
+/* Reset */
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border: none;
+	overflow: auto;
+	vertical-align: middle;
+}
+
+
+/* Balises */
+
+.indent {
+	margin-left: 30px;
+}
+/* --- Les liens du site --- */
+a {/* Vos liens url */
+	color:#FFE100;
+    transition: all 0.3s ease-in-out 0s;	
+    text-decoration:none;
+    font-size:13px;
+    font-weight:bold;
+}
+
+a:hover, div#footer span a:hover {
+    color:#00D904;
+    font-weight:bold;
+}
+
+
+a.small_link { font-size: 10px;}
+
+#menu-left a{color: #412600;}
+#menu-left a:hover{color: #ffffff;}
+
+a.info { color:#ffe100;}
+
+div#footer a, div#footer span a, .footer-infos  span a{
+    color: #ffe100;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+ 
+div#footer span {
+    color: #ffffff;
+    font-size: 12px;
+}
+
+div#footer a:hover, div#footer span a:hover, .footer-infos  span a:hover {
+	color:#00D904;
+ }	
+img {
+    border:none;
+}
+
+hr {
+    color:#061729;
+    height:1px;
+}
+
+p {
+    margin-bottom:0.7em;
+    line-height:1.40em;
+    font-size:1em;
+}
+
+/* --- LISTES --- */
+/*----------------*/
+
+ul, ol {
+	line-height: normal;
+	margin-bottom: 10px;
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+   padding-inline-start: 40px;
+}
+ul {
+	list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    margin:0;
+    line-height:normal;
+
+}
+
+ul.no-list {
+	list-style: none;
+}
+
+/* Classes textes */
+.text_center {
+    text-align:center;
+}
+
+.text_small {
+    font-size:10px;
+    font-weight:normal;
+}
+
+.text_strong {
+    font-weight:bold;
+}
+
+.text_justify {
+    text-align:justify;
+}
+
+.img_right {
+    float:right;
+    margin:6px;
+}
+
+.img_left {
+    float:left;
+    margin:6px;
+}
+
+.valign_top {
+    vertical-align:top;
+}
+
+.valign_middle {
+    vertical-align:middle;
+}
+
+.valign_bottom {
+    vertical-align:bottom;
+}
+
+.spacer {
+    clear:both;
+}
+
+/* Stylisations de code
+--------------------------------------*/
+/* ligne horzontale */
+hr {
+    background: none repeat scroll 0 0 #444444;
+    border: medium none;
+    height: 1px;
+    margin: 1px auto;
+    width: 99%;
+}
+
+/* Centrer son texte */
+.center, span.center, p.center {text-align:center;}
+
+/* Texte à gauche */
+.left {text-align:left;}
+
+/* Texte à droite */
+.right{text-align:right;}
+
+/* Texte flottant à droite */
+.float_right {
+    float: right;
+    margin: 5px;
+}
+/* Texte flottant à gauche */
+.float_left {
+    float: left;
+    margin: 5px;
+}
+ /* Gère l'alignement vertical d'un texte ou d'une image */
+.valign_middle {
+    vertical-align: middle;
+}
+/* Déplacer le texte hors du Viewport avec text-indent ou position*/
+.display {
+    position: absolute;
+    left: -9999em;
+}
+.indent {
+    margin-left: 30px;
+}
+.quote {
+    border: 1px dashed #AAAAAA;
+    color: #444444;
+    margin: 0 11px;
+    padding: 24px 8px 8px;
+}
+
+.bb_block {
+    background: none repeat scroll 0 0 #fefefe;
+    border: 1px solid #777777;
+    margin: 5px 20px;
+    padding: 5px;
+    color: #222222;
+}
+
+fieldset {
+    background: none repeat scroll 0 0 #efefef;
+    border: 1px solid #CCCCCC;
+    color: #333333;
+    font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,'Bitstream Vera Sans',Times,serif;
+    margin: 20px 0;
+    padding: 6px;
+    position: relative;
+}
+
+legend {
+    background: none repeat scroll 0 0 #fefefe;
+    border: 1px solid #CCCCCC;
+    color: #333333;
+    font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,'Bitstream Vera Sans',Times,serif;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.5em;
+    margin-left: 0.5em;
+    margin-top: -0.4em;
+    padding: 2px 10px;
+    position: relative;
+    text-transform: uppercase;
+    top: 0;
+    vertical-align: middle;
+}
+
+html > body .question, html > body .notice, html > body .warning, html > body .error, html > body .success, html > body .note, html > body .astuce{
+    height: auto;
+    min-height: 50px;
+}
+.question, .notice, .warning, .error, .success, .note, .astuce {
+    background-position: 4px 4px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    display: block;
+    height: auto;
+    margin: 4px 25px;
+    padding: 4px 5px 10px 40px;
+	color: #555;	
+}
+
+.error   { color:#eeeeee !important;}
+.notice:before   { color: #777777}
+.warning:before	 { color: #eeeeee;}
+.success:before	 { color: #09460E;}
+.question:before { color:#0000FF;}
+.note:before {color: #FFFFFF;}
+.astuce:before {color: #444444;}
+
+.success { background: url('../images/success.png') no-repeat scroll 3px 3px #B1E2AD;}
+.question { background: url('../images/question.png')  no-repeat scroll 3px 3px #B6DBF6;}
+.notice { background: url('../images/notice.png') no-repeat scroll 3px 3px #E4E4E4;}
+.warning { background: url('../images/important.png') no-repeat scroll 3px 3px #F3BC70;}
+.error { background: url('../images/stop.png') no-repeat scroll 3px 3px #AA0000; border: 1px solid #2d313a;}
+.note { background: url('../images/note.png') no-repeat scroll 3px 3px #222222; border: 1px solid #111111;color: #FFFFFF;}
+.astuce { background: url('../images/astuce.png') no-repeat scroll 3px 3px #CCCCCC; border: 1px solid #2d313a;}
+
+/** Titres **/
+
+h1 {
+	color: #ee0000;
+	border-bottom: 2px solid #AA0000;
+    font-size: 3em;
+    margin: .67em 0;
+}
+
+h3.title1, h3.title2{
+    font-size: 2.2rem;
+    margin: auto auto -5px;
+    padding: 0 5px;
+
+}
+/* Titre 1 */
+h3.title1 {
+	color: #ee0000;
+    font-size: 2.2rem;
+	border-bottom: 2px solid #aa0000;	
+}
+	
+/* Titre 2 */
+h3.title2{
+	border-bottom: 1px solid #AA0000;
+	margin-left: 3rem;
+	display: inline-block;	
+}
+h4.stitle1, h4.stitle2{
+    font-size: 2.2rem;
+	border-bottom: 1px solid #AA0000;
+	display: inline-block;
+
+}
+/* Sous titre 1 */
+h4.stitle1{ margin-left: 5rem;}
+
+/* Sous titre 2 */
+h4.stitle2{ margin-left: 6rem;}
+
+h5.sub_title {
+	color:#ee0000;
+	font-size: 1.6rem;
+	text-decoration: none;
+	font-weight: bold;
+}
