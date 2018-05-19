@@ -1,0 +1,535 @@
+/*---------------------------------------------------------
+ * Theme    : Thème MysticHalloween
+ * Par      : EDN | Swan
+ * Date     : 05/11/2017
+ * Site web :  http://easy-design.net/
+ * Commentaire ou autre de l'auteur 
+ # Merci de ne pas toucher au entête des fichiers CSS.
+ * Contient les conteneurs de mise en page.
+ * Le design.css permet de mettre en forme votre site web avec le design de votre choix
+ *----------------------------------------------------------*/
+/* -- Elements HTML generiques specifique au theme -- */
+/* -------------------------------------------------- */
+html {
+	font-size: 100%;
+	font-size: 10px;
+}
+
+body {
+	background: #20232C url(images/bg.jpg) repeat scroll 0 0;
+	position: relative;
+	height: auto;
+	min-height: 100%;
+	color: #def2eb;
+	font-size: 1.3em;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+@media (max-width: 768px) {
+	body {
+		font-size: 1.4em;
+	}
+}
+
+div#sub-bg {}
+
+/*#########################
+		Entete du site
+#########################*/
+
+/* -- En-tete de page - Header -- */
+/* ------------------------------ */
+header#header {
+	background: linear-gradient(to bottom, #1f4c45 0%,#1e3c3a 25%,#20232c 100%);
+	margin: auto;
+}
+
+/* --- Partie superieure du header --- */
+div#top-header {
+	background: transparent url(images/head-top.png) repeat-x scroll 0 bottom;
+	border-color: #E1E1E1;
+	position: relative;
+	display: flex;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	flex-direction: row;
+	-ms-flex-direction: row;
+	-webkit-flex-direction: row;
+	margin: auto;
+	min-height: 250px;
+}
+
+@media (max-width: 768px) {
+	div#top-header {
+		flex-direction: column;
+		-ms-flex-direction: column;
+		-webkit-flex-direction: column;
+		margin-bottom:20px;
+	}
+	#hide-right {display:none;}
+}
+/* --- Logo et Nom du site web --- */
+#site-infos {
+	display: flex;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	margin: 1.5em 0 0 1.5em;
+	max-width: 940px;
+	flex: 1 1 auto;
+}
+
+#site-logo {
+	margin: 0 1em 0 0;
+	width: 60px;
+	height: 60px;
+	background-image: url(images/logo.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	flex: 0 0 auto;
+	-ms-flex: 0 0 auto;
+	-webkit-flex: 0 0 auto;
+}
+
+#site-name-container {
+	margin: 0.4em 0 0 0;
+}
+
+#site-name {
+    color:transparent;
+	background-image: linear-gradient(#1ECC85 40%, #1f4c45 80%, #1e3c3a 120%);
+    -webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-stroke: 1px rgba(0, 0, 0, 0.9);
+  /*---------*/
+	font-size: 3em;
+	font-weight: bold;
+	line-height: 1em;
+	letter-spacing: 0.02em;
+	text-decoration: none;			 
+	text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+#site-slogan {
+	display: block;
+	padding: 0.1em 0 0 0.1em;
+	color: #1ECC85;
+	font-size: 1em;
+	letter-spacing: 0.1em;
+}
+
+@media (min-width: 769px) {
+	#site-logo {
+		width: 350px;
+		height: 295px;
+	}
+
+	#site-name-container {
+		margin: 4em 0 0 0.2em;
+		margin-bottom: 15px;		
+	}
+
+	#site-name {
+		font-size: 4em;
+	}
+	
+}
+
+/* --- Partie inferieur du header --- */
+
+#sub-header, #sub-header a {
+    color: #1ECC85;
+    font-weight: normal;
+}
+
+div#sub-header {
+    background: #1f4c45;
+    border-top: 1px solid #178055;
+    border-bottom: 1px solid #178055;
+    min-height: 80px;
+}
+
+@media (max-width:768px) {
+	div#sub-header {
+		padding-top: 0px;
+		}
+}
+
+div#sub-header-content{
+	margin: auto;
+	max-width: 98%;
+}
+
+
+/* --  Menu Navigation  -- */
+/* ----------------------- */
+
+#navigation{
+    display: block;
+    list-style: none;
+    margin: 0;
+    width: 98%;
+    font-size: 12px;
+    overflow: hidden;
+	margin: auto;
+	padding-top: 8px;
+	text-align: center;
+	min-height: 86px;	
+}
+
+#navigation li{
+	background-color: #20232C;
+	border-radius: 50px;
+	display: inline-block;
+	font-size: 15px;
+	margin: 0 15px 0 0;
+	min-height: 65px;
+	min-width: 65px;
+	padding: 9px 0 0 0px;
+	text-align: center;
+	border: 2px solid #1ECC85;
+	box-shadow: 0 0 10px black, 0 0 0 1px rgba(30, 204, 133, 0.5) inset;
+}
+
+#navigation a{
+	display: block;
+	font-size: 1em;
+	padding-right: 3px;
+	color: #1ECC85;
+	transition: all 0.5s ease;
+	padding-top: 9px;
+}
+
+#navigation a:hover{
+color: #e349ff;
+}
+
+#navigation ul{
+padding-inline-start: 0px;
+}
+
+@media (max-width:768px) {
+	#navigation li{
+		margin-bottom: 11px;
+	}
+	nav.small-screen {
+		margin-right: 0;
+		width: 100%;
+		height:auto;
+	}
+	ul.connect-content { 
+		margin-block-start:  0px;
+		margin-block-end:  0px;
+		padding-inline-start: 0px;
+		text-align: center;
+	}
+	ul.connect-content { margin: auto; padding-top: 3px;}
+	ul.connect-content li { 
+		display: block; 
+		margin:auto;
+		width: 100%;
+		border-top: 1px solid rgba(120, 120, 120, 0.2);
+		padding: 0.5em 0 0.5em 0;
+	}
+	ul.connect-content li , ul.connect-content ul li a {
+		padding:1.063em 0 1.063em 0;
+		width: 100%;
+		border-bottom: 0; 
+		color: #000000;
+	}
+}
+
+
+
+/*############################################
+	Menu droit du site - Menu gauche du site
+##############################################*/
+
+/* -- Flèche de masquage de la colonne droite & gauche-- */
+/* ----------------------------------------------------- */
+
+#hide-left { float:left; margin: 8px 0 0 13px; position: absolute;}
+#hide-right { float:right; margin: 8px 0 13px 0;position: relative;}
+
+.fa.fa-arrow-left { color: rgba(0,0,0, 0.6);}
+.fa.fa-arrow-right  { color: rgba(0,0,0, 0.6);}
+
+/* -- Conteneur global du site -- */
+/* ------------------------------ */
+
+div#global-master{
+	background-color: #20232C;
+	border-width: 0 1px 1px 1px;
+	border-style: solid;
+	border-color: #000000;
+	margin: 0 auto 0 auto;
+	padding: 0;
+	box-shadow: 0px 5px 10px rgba(30, 204, 133, 0.5);
+}
+div#global{
+	display: flex;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	flex-direction: column;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+	margin: 0 auto 0 auto;
+	padding: 0 10px;
+}
+
+#global, #global-master {
+    width: 100%;
+    max-width: 1024px;
+}
+div#main {
+	padding: 0 0 10px 0;
+	max-width: 100%;
+	order : 1;
+	-ms-flex-order: 1;
+	-webkit-flex-order: 1;
+}
+
+aside#menu-left,
+aside#menu-right {
+	width: 100%;
+}
+
+aside#menu-left  {
+	order : 2;
+	-ms-flex-order: 2;
+	-webkit-flex-order: 2;
+}
+aside#menu-right {
+	order : 3;
+	-ms-flex-order: 3;
+	-webkit-flex-order: 3;
+}
+
+@media (min-width: 769px) {
+	div#global {
+		min-height: 100vh;
+		flex-direction: row;
+		-ms-flex-direction: row;
+		-webkit-flex-direction: row;
+	}
+
+	div#main {
+		padding: 0 10px;
+		order : 2;
+		-ms-flex-order: 2;
+		-webkit-flex-order: 2;
+		flex: 1 0 auto;
+		-ms-flex: 1 0 100%;
+		margin-bottom: 30px;
+	}
+
+	aside#menu-left,
+	aside#menu-right {
+    	width: 200px;
+	}
+
+	aside#menu-left  { 
+		order : 1;
+		-ms-flex-order: 1;
+		-webkit-flex-order: 1;
+	}
+	aside#menu-right { 
+		order : 3;
+		-ms-flex-order: 3;
+		-webkit-flex-order: 3;
+	}
+	
+	#main.main-with-left,
+	#main.main-with-right {
+		width: calc(100% - 200px);
+		-ms-flex: 1 0 auto; /*Tricks IE*/
+	}
+	
+	#main.main-with-left.main-with-right {
+		width: calc(100% - 400px);
+		-ms-flex: 1 0 auto; /*Tricks IE*/
+	}
+}
+
+
+/* -- Contenu de la page -- */
+/* ------------------------ */
+
+/* --- Contenu central --- */
+div#main-content {
+	padding: 1.5em 0;
+}
+
+
+/*#############################################
+		Containers du site - Modules minis 
+#############################################*/
+/*-- mini-container des colonnes droite et gauche -- */
+/* ------------------------------------------------- */
+
+.module-mini-container {
+    margin: 0 0 10px 0;
+    padding: 5px;
+    border-spacing: 1px;
+    clear: both;
+}
+
+.module-mini-top {
+	padding: 0.2em 0 0.2em 0;
+	min-height: 24px;
+	border-bottom: 1px solid transparent;
+	border-image: linear-gradient(to right, #a849a3 25%,#e570e7 49%,#a849a3 77%);
+	border-image-slice: 1;
+	text-align: center;
+}
+
+.module-mini-container h5.sub_title,
+.module-mini-container h3.sub_title {
+	color: #EFEFEF;
+	font-size: 1.4rem;
+	font-weight: normal;
+	text-decoration: none;
+	margin-top: 5px;	
+}
+
+.module-mini-contents {
+	padding: 0px 4px 0 4px;
+	border-top: none;
+	border-bottom: none;
+	text-align: left;
+}
+
+.module-mini-bottom {
+	height: 15px;
+}
+
+
+
+/* mini-container des colonnes droite et gauche */
+
+/* --- Contenu --- */
+#content {
+	padding: 0 1em;
+	text-align: justify;
+}
+
+@media (min-width: 769px) {
+	div#main.main-with-left.main-with-right section .content {
+		padding: 0 5px;
+	}
+}
+
+@media (max-width: 768px) {
+	.content {
+		padding: 1em 0;
+	}
+}
+
+.content + aside {
+	clear: both;
+}
+
+/* --- Grands Contenus --- */
+
+.container {
+    padding: 10px;
+}
+
+/* -- Pied de page - Footer -- */
+/* --------------------------- */
+footer#footer {
+	background-color: #1f4c45;
+	border-top: 1px solid #178055;
+	width: 100%;
+	clear: both;
+	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.8);
+}
+
+footer#footer .footer-content {
+	margin: 0 auto 0 auto;
+	padding: 1.5em 0;
+	max-width: 1024px;
+}
+
+footer#footer .footer-infos {
+    clear: both;
+	margin: 0 auto auto;
+	padding: 26px 0 0 0;
+	text-align: center;
+	min-height: 71px;
+}
+
+footer#footer .footer-infos span {
+	color: #f0f0f0;
+	font-size: 0.8em;
+}
+
+.footer-infos a.small_link {
+    font-weight: normal;
+}
+
+#seo_social a{
+    display: none;
+	}
+
+/*======================================
+		Alls Media Queries
+	CSS applique aux écrans PC & GSM 
+========================================*/
+
+
+@media (max-width:768px) {
+	header#header{
+		background:none;
+		max-width: 100%;
+		height: auto;
+	}
+
+	img.entete{
+		max-width: 100%;
+		height: auto;
+	}
+	div#top-header {
+		max-width: 100%;
+		min-height: auto;
+	}
+	
+	#hide-left, #hide-left { display: none; }
+
+	footer#footer {
+	clear: both;
+	margin: auto;
+	width: 1250px;
+    height: auto;		
+	}
+	div#footer-bis {  height: 1px;}	
+	footer#footer .footer-infos {
+		min-height: 40px;
+		text-align: center;
+		margin-bottom: 0px;
+		padding-top: 10px;
+	}
+	footer#footer {width:100%}
+
+	.footer-infos span {
+    display: block;
+    padding: 0 0 5px;
+	}
+	footer#footer .footer-infos {
+    min-height: 40px;
+    padding-top: 5px;
+    text-align: center;
+}
+	footer#footer .footer-infos span {
+	font-size: 0.8em;
+}
+	span.footer-infos-separator {
+		display: none;
+	}
+}
+
+@media (min-width:769px) {
+		img.entete{display: none;}
+}
+
